@@ -59,15 +59,15 @@ const AuthForm = () => {
                 <form className="space-y-6" onSubmit={handleSubmit(onSubmit)}>
                     {variant === 'REGISTER' && (
                         <Input
-                        disabled={isLoading}
-                        register={register}
-                        errors={errors}
-                        required
-                        id="name" 
-                        label="Name"
+                            disabled={isLoading}
+                            register={register}
+                            errors={errors}
+                            required
+                            id="name" 
+                            label="Name"
                         />
                     )}
-                    <Input 
+                    <Input
                         disabled={isLoading}
                         register={register}
                         errors={errors}
@@ -121,15 +121,12 @@ const AuthForm = () => {
                     </div>
                 </div>
                 <div className="flex gap-2 justify-center text-sm mt-6 px-2 text-gray-500">
-                <div>
-                    {variant === 'LOGIN' ? 'New to Messenger?' : 'Already have an account?'} 
-                </div>
-                <div 
-                    onClick={toggleVariant} 
-                    className="underline cursor-pointer"
-                >
-                    {variant === 'LOGIN' ? 'Create an account' : 'Login'}
-                </div>
+                    <div>
+                        {variant === 'LOGIN' ? 'New on system?' : 'Already have an account?'} 
+                    </div>
+                    <div onClick={toggleVariant} className="underline cursor-pointer">
+                        {variant === 'LOGIN' ? 'Create an account' : 'Login'}
+                    </div>
                 </div>
             </div>
         </div>
